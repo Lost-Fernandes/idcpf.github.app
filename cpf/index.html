@@ -1,0 +1,76 @@
+<!doctype html>
+html<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Identificador de Pessoas (Exemplo)</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Identificador de Pessoas — Exemplo</h1>
+    </header>
+
+    <section class="card grid">
+      <div>
+        <div class="search-row">
+          <input id="q" type="text" placeholder="Digite nome ou sobrenome" />
+          <button id="searchBtn">Pesquisar</button>
+        </div>
+        <div class="muted small">Resultados (clique para ver os dados)</div>
+        <div id="results" class="result-list"></div>
+
+        <hr style="margin:12px 0" />
+
+        <h3 class="small">Adicionar / Editar cadastro</h3>
+        <div class="form-group"><input id="firstName" type="text" placeholder="Nome" /></div>
+        <div class="form-group"><input id="lastName" type="text" placeholder="Sobrenome" /></div>
+        <div class="form-group"><input id="cpf" type="text" placeholder="CPF (somente números)" /></div>
+        <div class="form-group"><input id="address" type="text" placeholder="Endereço" /></div>
+        <div class="form-group"><input id="age" type="text" placeholder="Idade" /></div>
+        <div class="form-group"><input id="weight" type="text" placeholder="Peso (kg)" /></div>
+        <div class="form-group">
+          <label class="small muted">Foto (opcional)</label>
+          <input id="photoFile" type="file" accept="image/*" />
+        </div>
+        <div class="actions">
+          <button id="saveBtn">Salvar</button>
+          <button id="clearBtn" style="background:#ef4444">Limpar campos</button>
+          <button id="deleteBtn" style="background:#6b7280">Excluir selecionado</button>
+        </div>
+      </div>
+
+      <aside>
+        <div class="profile card" style="padding:16px">
+          <div class="avatar" id="avatarBox">
+            <img src="" alt="foto" class="avatar-img" id="avatarImg" style="display:none" />
+            <div id="avatarPlaceholder">Sem foto</div>
+          </div>
+
+          <div class="info">
+            <div class="info-row"><div class="muted">Nome</div><div id="showName"></div></div>
+            <div class="info-row"><div class="muted">CPF</div><div id="showCpf"></div></div>
+            <div class="info-row"><div class="muted">Endereço</div><div id="showAddress"></div></div>
+            <div class="info-row"><div class="muted">Idade</div><div id="showAge"></div></div>
+            <div class="info-row"><div class="muted">Peso</div><div id="showWeight"></div></div>
+          </div>
+
+          <div style="width:100%;margin-top:12px;display:flex;gap:8px;justify-content:center">
+            <button id="downloadJson">Exportar JSON</button>
+            <button id="importJson">Importar JSON</button>
+          </div>
+
+          <input id="importFile" type="file" accept="application/json" style="display:none;margin-top:8px" />
+        </div>
+      </aside>
+    </section>
+
+    <footer class="muted">
+      Este é um exemplo local. Dados sensíveis devem ser protegidos e não enviados para servidores sem consentimento.
+    </footer>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

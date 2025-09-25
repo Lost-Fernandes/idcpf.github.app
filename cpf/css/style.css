@@ -1,0 +1,133 @@
+:root {
+  --bg:#f3f4f6;
+  --card:#ffffff;
+  --accent:#0ea5a4;
+  --muted:#6b7280;
+}
+* {
+  box-sizing:border-box;
+  font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+body {
+  margin:0;
+  background:var(--bg);
+  padding:20px;
+}
+.container {
+  max-width:900px;
+  margin:0 auto;
+}
+header {
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin-bottom:18px;
+}
+h1 {
+  margin:0;
+  font-size:1.25rem;
+}
+.card {
+  background:var(--card);
+  border-radius:12px;
+  padding:16px;
+  box-shadow:0 6px 18px rgba(15,23,42,0.06);
+}
+.grid {
+  display:grid;
+  grid-template-columns:1fr 320px;
+  gap:16px;
+}
+.search-row {
+  display:flex;
+  gap:8px;
+  margin-bottom:12px;
+}
+input[type=text], input[type=file], select {
+  width:100%;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #e6e7eb;
+}
+button {
+  padding:10px 12px;
+  border-radius:8px;
+  border:0;
+  background:var(--accent);
+  color:#fff;
+  cursor:pointer;
+}
+.result-list {
+  max-height:220px;
+  overflow:auto;
+  margin-top:8px;
+  border-radius:8px;
+  border:1px solid #e6e7eb;
+  padding:8px;
+}
+.person-item {
+  padding:8px;
+  border-radius:6px;
+  cursor:pointer;
+}
+.person-item:hover {
+  background:#f8fafb;
+}
+.profile {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+}
+.avatar {
+  width:180px;
+  height:180px;
+  border-radius:10px;
+  background:#eef2f7;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+img.avatar-img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.info {
+  width:100%;
+}
+.info-row {
+  display:flex;
+  justify-content:space-between;
+  padding:8px 0;
+  border-bottom:1px dashed #efefef;
+}
+.info-row:last-child {
+  border-bottom:0;
+}
+.muted {
+  color:var(--muted);
+  font-size:0.9rem;
+}
+.small {
+  font-size:0.85rem;
+}
+.form-group {
+  margin-bottom:8px;
+}
+.actions {
+  display:flex;
+  gap:8px;
+  margin-top:10px;
+}
+footer {
+  margin-top:12px;
+  text-align:center;
+  color:var(--muted);
+  font-size:0.85rem;
+}
+@media(max-width:880px) {
+  .grid { grid-template-columns:1fr; }
+  .avatar { width:140px; height:140px; }
+}
